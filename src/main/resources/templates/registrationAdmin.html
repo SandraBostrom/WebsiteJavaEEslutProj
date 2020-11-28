@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::body})" >
+<head>
+    <title th:text="${title}"> Login Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/shoppingPage.css">
+
+</head>
+<body>
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+            '
+            <form th:action="@{/processAdmin}" method="post" th:object="${user}">
+                <h1 class="text-center">   Register Here</h1>
+
+
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="email">User Email</label>
+                        <input type="email"
+                               name="email"
+
+                               th:classappend="${#fields.hasErrors('email') ? 'is-invalid' : ''}"
+                               class="form-control" id="email">
+                        <div th:each="error :${#fields.errors('email')}" th:text="${error}"  class="invalid-feedback">
+
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password"
+                               name="password"
+                               th:classappend="${#fields.hasErrors('password') ? 'is-invalid' : ''}"
+
+                               class="form-control" id="password" aria-describedby="emailHelp">
+
+                        <div th:each="error :${#fields.errors('password')}" th:text="${error}"  class="invalid-feedback">
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="inputAddress">Address</label>
+                    <input type="text"
+                           class="form-control"
+                           name="address"
+                           th:classappend="${#fields.hasErrors('address') ? 'is-invalid' : ''}"
+
+                           id="inputAddress" placeholder="1234 Main St">
+                    <div th:each="error :${#fields.errors('address')}" th:text="${error}"  class="invalid-feedback">
+
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputAddress2">Address 2</label>
+                    <input type="text"
+                           name="address2"
+                           class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor">
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="inputCity">City</label>
+                        <input type="text"
+                               name="city"
+                               th:classappend="${#fields.hasErrors('city') ? 'is-invalid' : ''}"
+
+                               class="form-control" id="inputCity">
+                        <div th:each="error :${#fields.errors('city')}" th:text="${error}"  class="invalid-feedback">
+
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <label for="inputState">State</label>
+                        <select id="inputState"
+                                name="state"
+                                th:classappend="${#fields.hasErrors('state') ? 'is-invalid' : ''}"
+
+                                class="form-control">
+                            <option selected>Choose...</option>
+                            <option>...</option>
+                        </select>
+                        <div th:each="error :${#fields.errors('state')}" th:text="${error}"  class="invalid-feedback">
+
+                        </div>
+                    </div>
+                    <div class="form-group col-md-2">
+                        <label for="inputZip">Zip</label>
+                        <input type="text"
+                               name="zipCode"
+                               th:classappend="${#fields.hasErrors('zipCode') ? 'is-invalid' : ''}"
+
+                               class="form-control" id="inputZip">
+                        <div th:each="error :${#fields.errors('zipCode')}" th:text="${error}"  class="invalid-feedback">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox"
+                           name="agreed"
+                           th:classappend="${#fields.hasErrors('agreed') ? 'is-invalid' : ''}"
+                           class="form-check-input" id="exampleCheck1">
+                    <label class="form-check-label" for="exampleCheck1">Accept terms and conditions.</label>
+                    <div th:each="error :${#fields.errors('agreed')}" th:text="${error}"  class="invalid-feedback">
+
+                    </div>
+                </div>
+                <button type="submit" class="btn btn-primary">Sign up</button>
+            </form>
+
+
+        </div></div></div>
+
+
+</body>
+</html>

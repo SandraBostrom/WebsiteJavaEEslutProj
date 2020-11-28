@@ -1,0 +1,128 @@
+
+.banner{
+    width:auto;
+    height:93vh;
+    background:linear-gradient(rgba(0,0,0,.8),rgba(0,0,0,.8));
+    background-size:cover;
+    background-repeat: no-repeat;
+
+    color:white;
+
+
+}
+.flex{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+
+
+}
+
+.btn-info {
+    font-family: Raleway-SemiBold;
+    font-size: 15px;
+    font-weight: bold;
+    color: rgba(58, 133, 191, 0.75);
+    letter-spacing: 1px;
+    line-height: 15px;
+    border: 2px solid rgba(58, 133, 191, 0.75);
+    border-radius: 40px;
+    background: gold;
+    transition: all 0.3s ease 0s;
+}
+
+
+.my-register{
+
+    padding:0px;
+
+}
+
+
+
+
+/*login css*/
+
+
+.logins {
+
+    background-color: #EAEAEA;
+}
+#login .container #login-row #login-column #login-box {
+    margin-top: 120px;
+    max-width: 600px;
+    height: 420px;
+    border: 1px solid #9C9C9C;
+    background-color: white ;
+}
+#login .container #login-row #login-column #login-box #login-form {
+    padding: 20px;
+}
+#login .container #login-row #login-column #login-box #login-form #register-link {
+    margin-top: -85px;
+}
+.form-control {
+    margin-top: 9px;
+    margin-left: 30px;
+    border: 1px solid orange;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+    box-shadow: none;
+}
+
+
+.navbar-brand {
+    display: inline-block;
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    line-height: inherit;
+    white-space: nowrap;
+}
+
+.navbar-nav .nav-link {
+    padding-right: 0;
+    padding-left: 0;
+    background-color: #17a2b8;
+}
+.navbar-nav .dropdown-menu {
+    position: static;
+    float: none;
+}
+
+.navbar-collapse {
+    flex-basis: 100%;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.navbar-toggler {
+    padding: 0.25rem 0.75rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: black;
+    border: 1px solid black;
+    color: black;
+    border-radius: 0.25rem;
+}
+.navbar-toggler:hover, .navbar-toggler:focus {
+    text-decoration: none;
+}
+
+.navbar-toggler-icon {
+    display: inline-block;
+    width: 1.5em;
+    height: 1.5em;
+    vertical-align: middle;
+    content: "";
+    background: no-repeat center center;
+    background-size: 100% 100%;
+}
+
+.logo {
+    height: 40px;
+    margin: 5px 10px;
+}

@@ -1,0 +1,170 @@
+
+#gallery{
+    color: black;
+}
+
+@media screen and (min-width: 650px) {
+    #gallery{
+        margin-left: 50%;
+    }
+}
+@media screen and (max-width: 650px) {
+    h3 {
+        display: none;
+    }
+}
+
+.textInImage {
+    height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: static;
+    background-repeat: no-repeat;
+    opacity: 0.7;
+    background-image: url("https://images.unsplash.com/photo-1545989253-02cc26577f88?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+
+}
+
+.bg-img {
+    background-image: url("https://images.unsplash.com/photo-1564089915105-db97895bdd78?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1050&q=80");
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+h1{
+    color: #fff;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+.adoptionText{
+    font-family: 'Poppins', sans-serif;
+}
+
+.content{
+    background: #fff;
+    max-width: 960px;
+    margin: 10px auto;
+    padding:  20px 30px;
+    background: rgba(255,255,255,0.04);
+    box-shadow: -1px 4px 28px 0px rgba(0,0,0,0.75);
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+li{
+    padding: 20px;
+    background: #f6f6f6;
+    font-size: 20px;
+    color: #555;
+    position: relative;
+    border-bottom: 1px solid #e6e6e6;
+    height: 46px;
+}
+
+li:nth-child(even){
+    padding: 20px;
+    background: #f2f2f2;
+}
+
+li span{
+    display: block;
+}
+
+li span:nth-child(2){
+    font-size: 16px;
+    margin-top: 6px;
+    color: #999;
+}
+
+li div{
+    position: absolute;
+    top: 0;
+    right: 0px;
+    background: rgba(255,255,255,0.6);
+    width: 40px;
+    text-align: center;
+    padding: 10px 0;
+    font-weight:  bold;
+    cursor:  pointer;
+}
+.home-headline
+{
+    font-size: 24px;
+    color: #555555;
+    margin:auto;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+.carousel {
+    box-shadow: 1px 1px 4px 1px rgba(0, 0, 0, 0.5);;
+}
+
+.carousel-indicators {
+    z-index: 1;
+}
+
+@media only screen and (max-width: 980px) {
+    .slider {
+        width: 100%;
+        margin-left: 0;
+    }
+}
+.col-xs-2
+{
+    width: 200px;
+    height: 200px;
+    margin:20px;
+
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+/* Create four equal columns that sits next to each other */
+.column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+.column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 800px) {
+    .column {
+        flex: 50%;
+        max-width: 50%;
+    }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column {
+        flex: 100%;
+        max-width: 100%;
+    }
+}
+.section-headline
+{
+ font-size: 24px;
+    color: #555555;
+    margin:auto;
+    text-align: center;
+    margin-top: 90px;
+}

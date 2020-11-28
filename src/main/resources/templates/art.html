@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet"
+          href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"/>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-light" >
+    <a class="navbar-brand" href="#"><img src="https://a.deviantart.net/avatars-big/i/s/isiarts.jpg?4" class="logo" /></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto text-uppercase">
+            <li class="nav-item active">
+
+                <a th:href="@{/home}" class="nav-link" href="#">Hem <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/add}" class="nav-link" href="#">Lägg till</a>
+            </li>
+
+            <li class="nav-item">
+                <a th:href="@{/delete}" class="nav-link"  href="#" >Ta bort </a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/change}" class="nav-link" href="#" >Ändra!</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/all}" class="nav-link" href="#" >Se alla</a>
+            </li>
+            <li class="nav-item">
+                <a th:href="@{/logout}" class="nav-link" href="#" >Logga ut</a>
+            </li>
+
+        </ul>
+        <!--    <form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-success my-2 my-sm-0" type="submit">Search</button>
+            </form>-->
+    </div>
+</nav>
+
+
+<div class="container">
+    <div class="row mt-5">
+        <div class="col-md-6 offset-md-3">
+
+                <h3>KOPPLA DETTA PROJEKT MED DET ANDRA (slutprojEE)! KOLLA YOUTUBE -
+                    https://www.youtube.com/watch?v=e6Wut1qmIJQ&list=PL7saoWAQ-9B5T8HmKTl4fRNPaEhdqOmgf&index=25</h3>
+                <h3>MENY MED ALTERNAIV: *LÄGG TILL *TA BORT *REDIGERA</h3>
+                <h3>MENY MED BESÖKSSTATISTIK  - MEST KÖPTA VAROR OSV</h3>
+                <h3>LADDA IN ALLA VAROR SOM FINNS</h3>
+                <button type="submit" class="btn btn-primary">Submit</button>
+
+                <a class="ml-5" href="#" th:href="@{/registration}">New around here? <span class="badge badge-pill badge-danger"> Sign up</span></a>
+            </form>
+
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+</body>
+</html>

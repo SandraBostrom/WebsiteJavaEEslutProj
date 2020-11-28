@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+          integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+            crossorigin="anonymous"></script>
+    <link type="text/css" rel="stylesheet" href="css/shoppingPage.css">
+
+<body>
+<section>
+
+
+    <div class="textInImage">
+        <div class="headerimage"></div>
+        <div class="topnav">
+            <a th:href="@{/adminHome}">Tillbaka</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </div>
+    </div>
+    <div class="container">
+    <div class="table-responsive">
+        <table id="artListTable" class="table table-bordered table-hover tabble-striped">
+            <thead>
+            <tr>
+                <th>Titel</th>
+                <th>Kategori</th>
+                <th>Pris</th>
+                <th>Om</th>
+            </tr>
+            </thead>
+            <tbody>
+                <tr data-th-each="art : ${art}">
+                    <td><input hidden="hidden" name="id" th:value="${art.id}"></td>
+                    <td><a th:href="@{/adminHome/artInfo(name=${art.name})}"><span th:text="${art.name}"></span></a></td>
+                    <td th:text="${art.category}"></td>
+                    <td th:text="${art.price}"></td>
+                    <td th:text="${art.description}"></td>
+                    <td th:text="${art.quantity}"></td>
+
+                    <td>delete</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
+
+    <div class="bg-img">
+
+    </div>
+</section>
+</body>
+<html>
